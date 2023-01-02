@@ -4,7 +4,7 @@ import socket;
 
 serversocket = socket.socket(socket.AF_INET, socket.SOCK_STREAM) # instantiates a socket object, specifying the protocol and communication type. For IPv6 use AF_INET6
 
-host = socket.gethostbyname() # specifies host to listen from, in this case we use the built-in method to retrieve the IP of this server, which returns the addr as a str
+host = socket.gethostname() # specifies host to listen from, in this case we use the built-in method to retrieve the IP of this server, which returns the addr as a str
 port = 666 # specifies port to listen for inbound connections on
 
 serversocket.bind((host,port)) # binds these specifications to the socket object we created
