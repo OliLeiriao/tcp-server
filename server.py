@@ -11,7 +11,10 @@ serversocket.bind((host,port)) # binds these specifications to the socket object
 
 serversocket.listen(3) # int specifies the MAX number of connections we will permit at any given time.
 
+print("Server ready. Awaiting connection with a client...")
+
 while True:
+
     clientsocket, address = serversocket.accept() # accept receives address information from the client
 
     print("Connection received from %r" % str(address))
